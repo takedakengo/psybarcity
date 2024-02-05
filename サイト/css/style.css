@@ -1,0 +1,321 @@
+@charset"utf-8";
+/* レイアウト */
+@font-face {
+    font-family:"font";
+    src: url(../瀞ノグリッチ明朝/瀞ノグリッチ明朝H1.otf);
+
+}
+
+body{
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+	background-size: cover;	
+}
+
+div{
+    display: flex;
+    flex: 1;
+}
+
+/* ---------------------ヘッダー-------------------- */
+header{
+    height: 40PX;
+    background-color: black;
+}
+
+/* .header-container{
+    flex-flow: row;
+}
+
+.button-container{
+    display: block;
+}
+
+.rogo{
+    display: block;
+    margin: -7px  40px -10px;
+} */
+
+.linkbar{
+    display: block;
+    margin: 20px 0 0 auto;
+}
+
+.linkbar li{
+    font-size: large;
+	display: inline;
+	margin:  0px 13px ;
+}
+
+.linkbar a{
+	text-decoration: none;
+	color: rgb(255, 255, 255);
+}
+
+
+/* ー-------------------- ナビメニュー　ー--------------------  */
+nav{
+    background-color: rgba(0, 0, 0, 0.618);
+    width: 100%;
+}
+
+nav a{
+    text-decoration: none;
+   margin-left: 20px;
+}
+
+
+.navigation{
+    margin-bottom: 30px;
+}
+
+.navigation li{
+    display: inline;
+}
+
+ul{
+    margin: 20px 0 10px -20px;
+    list-style-type: none;  
+}
+
+/* ー-------------------- ナビメニュー　ー--------------------  */
+
+
+/* ------------メイン------------ */
+main{
+    background-color: #000000f0;
+    width: 100%; 
+    background-image: url(../img/タイトル.png);
+    background-size: cover;
+}
+
+.main-container{
+    margin: -250px auto 0;
+}
+.main-container img{
+    margin: 0 auto;
+}
+
+.explain{
+    text-align: center;
+    font-size: 17px;
+    line-height: 30px;
+    margin: -50px auto 30px;
+}
+
+aside{
+    /* background-color: rgba(0, 0, 0, 0.618); */
+    width: 100%;
+}
+
+
+
+body,h1,h2,h3,h4,h5,h6,p,a{
+    z-index: 2;
+    font-family: "font";
+    src: url(../瀞ノグリッチ明朝/瀞ノグリッチ明朝1.otf) format(truetype);
+    color: white;
+}
+
+.syousai{
+    text-align: center;
+    font-size: 17px;
+    line-height: 25px;
+}
+
+.spec{
+    font-size: 27px;
+    text-align: center;
+    margin: 3vh auto 50px;
+}
+
+.koumoku{
+    font-size: 18px;
+    display: block;
+    margin: -5px auto 10px;
+
+}
+
+.koumoku1{
+    font-size: 18px;
+    display: block;
+    margin:  0 auto 40px;
+}
+/*------------------ フッター ------------------*/
+footer{
+    height: 250px;
+    margin-top: 10vw;
+}
+
+.footer-container{
+    flex-flow: row;
+}
+
+.rogo1{
+    display: block;
+    margin: 30px auto 20px;
+}
+
+.rights{
+    margin: 5px 15px;
+    display: block;
+    font-size: small;
+    color: lightgray;
+}
+/* ------------------キャラページ ------------------*/
+.character-container{
+    flex-flow: row;
+    margin: 0 auto;
+  
+}
+.character-explain{
+    flex-flow: row;
+    /* justify-content: space-between; */
+}
+.setumei{
+    line-height: 25px;
+    margin:auto 15px auto 0;
+
+}
+/*--------------メディア------------------*/
+@media(max-width:550px){
+    nav{
+        margin: 0 auto;
+        width: 100vw;
+    }
+    li{
+        display: inline;
+        margin-left: 10px;
+    }
+    .footer-container{
+        flex-flow: column;
+    }
+  
+  
+}
+
+
+
+@media (max-width:800px){
+   
+    div{
+        flex-direction: column;
+    }
+    .linkbar{
+		display: none;
+	}
+
+    nav{
+        order:0;
+        font-size: 17px;
+        text-align: center;
+        margin-left: -30px;
+    }
+    main{
+        order: -1;
+    }
+    footer{
+        order: 3;
+    }
+    li{
+        width: 100vw;
+        display: inline;
+        margin: 0 0 0 0px; 
+    }
+    
+}
+@media(min-width:550px){
+ 
+    .spec-container{
+        flex-flow: row;
+    }
+
+    .koumoku{
+        font-size: 19px;
+        margin-left: 13vw;
+    }
+
+    .koumoku1{
+        font-size: 19px;
+        margin: -5px 50px 45px -20px;
+    }
+
+    .footer-container{
+        flex-flow: row;
+    }
+    
+    .rights{
+        margin-top: 35px;
+    }
+
+    .rogo1{
+        margin-left: 30px;
+    }
+    .rights{
+        margin-right: 30px;
+    }
+    .character-container{
+        justify-content: space-around;
+      }
+}
+
+
+@media(min-width:750px){
+    .main-container{
+       flex-flow: column;
+       /* margin-top: -10px; */
+    }
+    .playimage{
+        margin-bottom: 70px;
+    }
+    .image-container{
+        margin-left: 20px;
+    }
+    .syousai{
+        margin: auto;
+        justify-content: space-around;
+    }
+    .explain{
+        text-align: center;
+        font-size: 21px;
+        line-height: 45px;
+        margin: -70px auto  30px;
+    }
+    .syousai{
+        margin:  80px auto -80px;
+    }
+    /* .spec{
+        margin: 30px auto;
+    } */
+    
+    .rogo1{
+        margin-left: 80px;
+    }
+    .rights{
+        margin-right: 100px;
+    }
+    
+}
+
+@media(min-width:790){
+    
+}
+@media (min-width:800px){
+    nav{
+        display: none;
+    }
+    .bar{
+        display: none;
+    }
+    h2{
+        margin-top: 30px;
+    }
+    .character-list{
+        width: 100vw;
+        flex-flow: row;
+      }
+    
+}
